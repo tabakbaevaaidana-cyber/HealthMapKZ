@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthMap.kz — Қазақстан Денсаулығы</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>HealthMap.kz</h1>
+  <p>Қазақстан бойынша денсаулық мониторингі</p>
+</header>
+
+<main>
+  <section id="map">
+    <h2>Интерактивті карта</h2>
+    <div id="mapid"></div>
+    <button onclick="updateMap()">Жаңарту</button>
+    <p>Қауіп деңгейі: жасыл = төмен, сары = орташа, қызыл = жоғары</p>
+  </section>
+
+  <section id="community">
+    <h2>Қоғам модулі</h2>
+    <input type="text" id="symptom" placeholder="Симптомды жазыңыз">
+    <button onclick="addSymptom()">Жіберу</button>
+    <ul id="symptomList"></ul>
+  </section>
+
+  <section id="contact">
+    <h2>Байланыс</h2>
+    <p>Телефон: <strong>+7 747 498 2775</strong></p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
